@@ -65,6 +65,10 @@ public double dist(Ponto p){
     public boolean equals(Object o) 
 {
     
+
+    if (o == null) {
+            return false;
+        }
     if (o == this) {
             return true;
         }
@@ -81,7 +85,7 @@ public double dist(Ponto p){
 
 public String ToString(){
     
-    return String.format(getNome()+"("+getX()+","+getY()+","+getZ()+")");
+    return String.format("%s(%f,%f,%f)",getNome(),getX(),getY(),getZ());
     
 }
     @Override
